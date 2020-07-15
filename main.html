@@ -7,11 +7,12 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </head>
   <body>
-    <h1>Project 1</h1>
-    <p>Vuejs tutorial</p>
-    <hr>
     <div id="vue-app">
+      <h1>{{ pageTitle }}</h1>
+      <p>{{ pageSubTitle }}</p>
+      <hr>
       <p>{{ bottomMessage }}</p>
+      <p>{{ greet('job') }}</p>
     </div>
 
 
