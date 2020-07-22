@@ -11,12 +11,12 @@
       <h1>{{ pageTitle }}</h1>
       <p>{{ pageSubTitle }}</p>
       <hr>
-      <p>Click here to visit <a v-bind:href="website">Google!</a></p>
+      <p>Click here to visit <a v-on:click.prevent="click" v-bind:href="website">Google!</a></p>
       <p>{{ bottomMessage }}</p>
       <p>Enter your name: <input type="text" name="" :value="name"></p>
       <p v-html='websiteTag'></p>
       <p>I am {{ age }} years old</p>
-      <button @click="older(1)">Older</button>
+      <button @click.once="older(1)">Older</button>
       <button v-on:click="younger(1)">Younger</button>
       <button @dblclick="older(10)">Decade Older</button>
       <button v-on:dblclick="younger(10)">Decade Younger</button>
