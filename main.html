@@ -15,6 +15,14 @@
       <p>{{ bottomMessage }}</p>
       <p>Enter your name: <input type="text" name="" :value="name"></p>
       <p v-html='websiteTag'></p>
+      <p>I am {{ age }} years old</p>
+      <button @click="older(1)">Older</button>
+      <button v-on:click="younger(1)">Younger</button>
+      <button @dblclick="older(10)">Decade Older</button>
+      <button v-on:dblclick="younger(10)">Decade Younger</button>
+      <div id="canvas" v-on:mousemove="updateXY">
+        {{ x }}, {{ y }}
+      </div>
       <p>{{ greet('job') }}</p>
     </div>
 
